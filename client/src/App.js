@@ -12,7 +12,7 @@ class App extends React.Component {
 
   componentDidMount() {
     const getPlayers = async () => {
-      const { data } = await axios.get('http://localhost:5000/api/players')
+      const { data } = await axios('http://localhost:5000/api/players')
       this.setState({ players: data })
     }
 
@@ -22,7 +22,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App" data-testid="App">
-     <PlayerList playerList={this.state.players}/>
+        <PlayerList playerList={this.state.players} />
       </div>
     )
   }
