@@ -19,6 +19,9 @@
   color: white;
 }
 
+.dark-mode {
+  background-color: grey;
+}
 .App-link {
   color: #61dafb;
 }
