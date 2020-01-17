@@ -2,8 +2,6 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom'
 import App from './App';
-import axios from 'axios'
-
 
 test('renders parent component', () => {
   const { getByTestId } = render(<App />);
@@ -27,7 +25,7 @@ test('renders player card', async () => {
     country: "heha"
   }]
 
-  jest.doMock('axios',() => {
+  jest.doMock('axios' ,() => {
     return Promise.resolve({
       data: () => Promise.resolve(res),
     })
