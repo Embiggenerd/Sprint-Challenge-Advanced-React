@@ -13,7 +13,7 @@ export const PlayerList = ({ playerList }) => {
 
     return (
         <div className="player-list" data-testid="player-list">
-            <button onClick={toggleDarkMode}>{darkMode ? "turn of dark mode" : "turn on dark mode"}</button>
+            <button onClick={toggleDarkMode}>{darkMode ? "turn off dark mode" : "turn on dark mode"}</button>
             <form>
                 <input onChange={handleOnChange} type="text" value={query} placeholder="search player name" />
             </form>
